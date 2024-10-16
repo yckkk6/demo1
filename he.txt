@@ -1,4 +1,5 @@
 hhhhh
 aa
-a master modify 
-
+<<<<<<< HEAD
+a master modify
+fix-hot modify

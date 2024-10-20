@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <script type="text/javascript" src="注册页面.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-image: url(../static/背景图.jpeg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+
+        .register {
+            width: 500px;
+            height: 600px;
+            background-color: #ffffff49;
+            margin-top: 150px;
+            border-radius: 15px;
+
+        }
+
+        .title {
+            padding-top: 25px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .userinfo {
+            margin-top: 30px;
+            padding-left: 50px;
+        }
+
+        div input[type="text"],
+        [type="password"] {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 3px solid #acd0ec;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        div input[type="submit"] {
+
+            margin-top: 40px;
+            width: 45%;
+            height: 40px;
+            border-radius: 5px;
+            color: rgb(1, 1, 1);
+            font-style: normal;
+            font-weight: bold;
+            border: 3px solid #adadad;
+            background-color: aquamarine;
+            cursor: pointer;
+            letter-spacing: 5px;
+            margin-bottom: 40px;
+        }
+
+        div label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .error {
+            font-size: 15px;
+            color: red;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body onload="ymd()">
+<!--注册主体-->
+<div class="http://localhost:8080/register">
+    <div class="title">
+        <h2>注册</h2>
+    </div>
+    <div class="userinfo">
+        <form action="/login" method="post">
+            <!--用户名输入-->
+            <label for="Uname">用户名</label><br \>
+            <input type="text" placeholder="请输入用户名" class="username" id="Uname">
+            <label class="error">用户名有误！</label>
+            <br \>
+            <!--密码输入与密码确认-->
+            <label for="Upwd">密码</label><br \>
+            <input type="password" placeholder="请输入密码" id="Upwd">
+
+            <!--性别输入，为单选-->
+            <label>性别：</label>
+            <input type="radio" id="man" name="sex" value="man">
+            <label for="man">
+                <image src="images/男性标志图.jpg" title="男性" width="25px"></image><strong>男</strong>
+
+            <br \>
+            <!--学习经历，为复选框-->
+            <label>已经学习过的语言：</label>
+            <input type="checkbox" id="C/C++" name="C/C++"><label for="C/C++">C/C++</label>
+            <input type="checkbox" id="Java" name="Java"><label for="Java">Java</label>
+            <input type="checkbox" id="Python" name="Python"><label for="Python">Python</label>
+            <br \>
+            <label>出生日期</label>
+            <select name="yyyy" id="year" onclick="selectYmd()"></select>年
+            <select name="mm" id="month" onclick="selectYmd()"></select>月
+            <select name="dd" id="day"></select>日
+            <input type="submit" value="注册" onclick="registered()" id="register">
+            &nbsp;
+            &nbsp;
+            <label>已经注册？<a href="login.html" style="font-size:18px">去登录！</a>
+                <br \>
+            </label>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

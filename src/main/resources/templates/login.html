@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录界面</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      background-image: url(../static/背景图.jpeg);
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: scroll;
+      background-size: cover;
+      align-items: center;
+    }
+
+    .login {
+      width: 550px;
+      height: 500px;
+      display: flex;
+      background-color: #ffffff49;
+      margin-top: 200px;
+      border-radius: 15px;
+      align-items: center;
+      flex-direction: column;
+
+    }
+
+    .title {
+      padding-top: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .userinfo {
+      margin-top: 10px;
+      padding-left: 50px;
+    }
+
+    div input[type="text"],
+    [type="password"] {
+      left: 45%;
+      width:85%;
+      height: 40px;
+      border-radius: 10px;
+      border: 3px solid #acd0ec;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    div input[type="submit"] {
+      margin-top: 40px;
+      width: 50%;
+      height: 40px;
+      border-radius: 5px;
+      color: rgb(1, 1, 1);
+      font-size: larger;
+      font-style: normal;
+      font-weight: bolder;
+      border: 1px solid #adadad;
+      background-color: aquamarine;
+      cursor: pointer;
+      letter-spacing: 5px;
+      margin-bottom: 40px;
+    }
+
+    div label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function logined() {
+      alert("登录成功！");
+      window.open("主界面.html");
+      window.close();
+    }
+  </script>
+</head>
+
+<body>
+<div class="login">
+  <div class="title">
+    <h2>登录</h2>
+  </div>
+  <div class="userinfo">
+    <form action="/" method="post">
+
+      <label for="name">用户名</label>
+      <input type="text" placeholder="请输入用户名" class="username" id="name">
+      <br \><br \>
+      <label for="code">密码 &nbsp&nbsp </label>
+      <input type="password" placeholder="请输入密码" class="password" id="code">
+      <br \>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="submit" placeholder="登录" class="submit" id="login" onclick="logined()">
+      <input type="checkbox" class="radio" id="remember"><label for="remember">记住密码</label>
+      <br \>
+      <label>没有账号？<a href="register.html">立即注册！</a></label>
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
